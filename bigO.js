@@ -54,6 +54,7 @@
 //   return result;
 }
 
+<<<<<<< HEAD
 //reverString
 function reverseString(str){
   let result = '';
@@ -63,6 +64,9 @@ function reverseString(str){
   return result;
 }
 
+=======
+// 3. reverse string 
+>>>>>>> refs/remotes/origin/master
 
 
 // function reverseString(str) {
@@ -79,45 +83,84 @@ function reverseString(str){
 
 //Prob 4
 
+// function triangleNumber(num){
+//   if (num === 1) return 1;
+//   let result = 0;
+//   for(let x = 0; x <= num; x++){
+//     result += x;
+//   }
+//   return result;
+// }
 
 
-// 6. Fibonacci
+// // 5. String Splitter
+
+// function stringSplitter(str, splitter){
+//   let result = '';
+//   for (let x = 0; x < str.length; x++){
+//     if(str[x] === splitter) continue;
+//     result += str[x];
+
+//   }
+//   return result;
+// }
 
 
-function compute(num) {
-  let result = [];
-  for (let i = 1; i <= num; i++) {
-
-    if (i === 1) {
-      result.push(0);
-    }
-    else if (i == 2) {
-      result.push(1);
-    }
-    else {
-      result.push(result[i - 2] + result[i - 3]);
-    }
-  }
-  return result;
-}
-
-// 7. Factorial
-function factorial(num){
-let result = 1;
-
-  for (let x = 1; x <= num; x++){
-    result *= x;
-  }
-  return result;
-}
 
 
-//tower
+// // 6. Fibonacci
+
+
+// function compute(num) {
+//   let result = [];
+//   for (let i = 1; i <= num; i++) {
+
+//     if (i === 1) {
+//       result.push(0);
+//     }
+//     else if (i == 2) {
+//       result.push(1);
+//     }
+//     else {
+//       result.push(result[i - 2] + result[i - 3]);
+//     }
+//   }
+//   return result;
+// }
+
+// // 7. Factorial
+// function factorial(num){
+// let result = 1;
+
+//   for (let x = 1; x <= num; x++){
+//     result *= x;
+//   }
+//   return result;
+// }
+
+// // 13. recursive big O
+
+// 1. o(n) one recursion call per number sheep 
+// 2. o(n) one set of operations (recursion call + multiplying by base)
+// 3. o(n) 
+// 4. o(n)
+// 5. o(n)
+// 6. o(2^n) two recursive calls are done for every number
+// 7. o(n)
+// 8. o(2^n)
+// 9. o(2^n)
+// 10. o(n^2)
+// 11. o(n^2)
+// 12. o(n)
+
+// 14. all are o(n)
+
 function towerOfHanoi(n, start, last, temp){
+  
   if (n === 1){
     console.log(`Move from ${start} to ${last}`)
     return
-  }    
+  } 
     towerOfHanoi(n - 1, start, temp, last)
     console.log(`Move from ${start} to ${last}`)
     towerOfHanoi(n - 1, temp, last, start)
