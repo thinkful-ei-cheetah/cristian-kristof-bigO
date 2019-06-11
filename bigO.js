@@ -69,6 +69,15 @@ function powerCalculator(base, pwr){
   return result;
 }
 
+//reverString
+function reverseString(str){
+  let result = '';
+  for (let x = str.length - 1; x !== -1; x--){
+    result += str[x];
+  }
+  return result;
+}
+
 
 //Prob 4
 
@@ -126,3 +135,5 @@ let result = 1;
   }
   return result;
 }
+
+
