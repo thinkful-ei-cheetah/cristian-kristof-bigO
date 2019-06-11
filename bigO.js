@@ -1,3 +1,5 @@
+'use strict';
+
 // 1. 1) O(1) 
 //    2) o(n)
 
@@ -28,9 +30,9 @@
 
 function setRodA(numDisks, rodA=[]) {
   for (let i = numDisks; i > 0; i--) {
-    rodA.push(i)
+    rodA.push(i);
   }
-  return console.log(rodA)
+  return console.log(rodA);
 }
 
 setRodA(5);
@@ -39,3 +41,88 @@ function towerOfHanoi(rodA=[], rodB=[], rodC=[], steps=[], moveTo='') {
   
 }
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//Prob sheepcount
+
+function sheepCount(num){
+  let x = 0;
+
+  while (x < num){
+    console.log(`${x+1}: Another sheep jumped over the fence`);
+    x++;
+  }
+  console.log('All the sheep jumped over the fence');
+}
+sheepCount(4);
+
+
+// 2. Power Calculator
+
+function powerCalculator(base, pwr){
+  if (pwr < 0 ) return false;
+  if (pwr === 0) return 1;
+  let result = base;
+  for(let x = 1; x < pwr; x++){
+    result *= base;
+  }
+  return result;
+}
+
+
+//Prob 4
+
+function triangleNumber(num){
+  if (num === 1) return 1;
+  let result = 0;
+  for(let x = 0; x <= num; x++){
+    result += x;
+  }
+  return result;
+}
+
+
+// 5. String Splitter
+
+function stringSplitter(str, splitter){
+  let result = '';
+  for (let x = 0; x < str.length; x++){
+    if(str[x] === splitter) continue;
+    result += str[x];
+
+  }
+  return result;
+}
+
+
+
+
+// 6. Fibonacci
+
+
+function compute(num) {
+  let result = [];
+  for (let i = 1; i <= num; i++) {
+
+    if (i === 1) {
+      result.push(0);
+    }
+    else if (i == 2) {
+      result.push(1);
+    }
+    else {
+      result.push(result[i - 2] + result[i - 3]);
+    }
+  }
+  return result;
+}
+
+// 7. Factorial
+function factorial(num){
+let result = 1;
+
+  for (let x = 1; x <= num; x++){
+    result *= x;
+  }
+  return result;
+}
