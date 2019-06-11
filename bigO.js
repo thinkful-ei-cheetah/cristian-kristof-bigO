@@ -28,45 +28,30 @@
 // input: number of disks
 // output: string of instructions
 
-function setRodA(numDisks, rodA=[]) {
-  for (let i = numDisks; i > 0; i--) {
-    rodA.push(i);
-  }
-  return console.log(rodA);
-}
-
-setRodA(5);
-
-function towerOfHanoi(rodA=[], rodB=[], rodC=[], steps=[], moveTo='') {
-  
-}
-
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-//Prob sheepcount
+// function sheepCount(num){
+//   let x = 0;
 
-function sheepCount(num){
-  let x = 0;
-
-  while (x < num){
-    console.log(`${x+1}: Another sheep jumped over the fence`);
-    x++;
-  }
-  console.log('All the sheep jumped over the fence');
-}
-sheepCount(4);
+//   while (x < num){
+//     console.log(`${x+1}: Another sheep jumped over the fence`);
+//     x++;
+//   }
+//   console.log('All the sheep jumped over the fence');
+// }
+// sheepCount(4);
 
 
-// 2. Power Calculator
+// // 2. Power Calculator
 
-function powerCalculator(base, pwr){
-  if (pwr < 0 ) return false;
-  if (pwr === 0) return 1;
-  let result = base;
-  for(let x = 1; x < pwr; x++){
-    result *= base;
-  }
-  return result;
+// function powerCalculator(base, pwr){
+//   if (pwr < 0 ) return false;
+//   if (pwr === 0) return 1;
+//   let result = base;
+//   for(let x = 1; x < pwr; x++){
+//     result *= base;
+//   }
+//   return result;
 }
 
 //reverString
@@ -79,30 +64,20 @@ function reverseString(str){
 }
 
 
+
+// function reverseString(str) {
+//   let result = ''
+//   for (let i = str.length-1; i >= 0; i--) {
+//     result += str[i]
+//   }
+//   return console.log(result)
+// }
+
+// reverseString('johnny')
+
+
+
 //Prob 4
-
-function triangleNumber(num){
-  if (num === 1) return 1;
-  let result = 0;
-  for(let x = 0; x <= num; x++){
-    result += x;
-  }
-  return result;
-}
-
-
-// 5. String Splitter
-
-function stringSplitter(str, splitter){
-  let result = '';
-  for (let x = 0; x < str.length; x++){
-    if(str[x] === splitter) continue;
-    result += str[x];
-
-  }
-  return result;
-}
-
 
 
 
@@ -137,3 +112,15 @@ let result = 1;
 }
 
 
+//tower
+function towerOfHanoi(n, start, last, temp){
+  if (n === 1){
+    console.log(`Move from ${start} to ${last}`)
+    return
+  }    
+    towerOfHanoi(n - 1, start, temp, last)
+    console.log(`Move from ${start} to ${last}`)
+    towerOfHanoi(n - 1, temp, last, start)
+}
+
+towerOfHanoi(5, 'A', 'C', 'B')
