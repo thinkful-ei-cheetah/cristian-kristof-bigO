@@ -28,101 +28,117 @@
 // input: number of disks
 // output: string of instructions
 
-function setRodA(numDisks, rodA=[]) {
-  for (let i = numDisks; i > 0; i--) {
-    rodA.push(i);
-  }
-  return console.log(rodA);
-}
-
-setRodA(5);
-
-function towerOfHanoi(rodA=[], rodB=[], rodC=[], steps=[], moveTo='') {
-  
-}
-
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-//Prob sheepcount
+// function sheepCount(num){
+//   let x = 0;
 
-function sheepCount(num){
-  let x = 0;
+//   while (x < num){
+//     console.log(`${x+1}: Another sheep jumped over the fence`);
+//     x++;
+//   }
+//   console.log('All the sheep jumped over the fence');
+// }
+// sheepCount(4);
 
-  while (x < num){
-    console.log(`${x+1}: Another sheep jumped over the fence`);
-    x++;
-  }
-  console.log('All the sheep jumped over the fence');
+
+// // 2. Power Calculator
+
+// function powerCalculator(base, pwr){
+//   if (pwr < 0 ) return false;
+//   if (pwr === 0) return 1;
+//   let result = base;
+//   for(let x = 1; x < pwr; x++){
+//     result *= base;
+//   }
+//   return result;
 }
-sheepCount(4);
+
+// 3. reverse string 
 
 
-// 2. Power Calculator
+// function reverseString(str) {
+//   let result = ''
+//   for (let i = str.length-1; i >= 0; i--) {
+//     result += str[i]
+//   }
+//   return console.log(result)
+// }
 
-function powerCalculator(base, pwr){
-  if (pwr < 0 ) return false;
-  if (pwr === 0) return 1;
-  let result = base;
-  for(let x = 1; x < pwr; x++){
-    result *= base;
-  }
-  return result;
-}
+// reverseString('johnny')
+
 
 
 //Prob 4
 
-function triangleNumber(num){
-  if (num === 1) return 1;
-  let result = 0;
-  for(let x = 0; x <= num; x++){
-    result += x;
-  }
-  return result;
-}
+// function triangleNumber(num){
+//   if (num === 1) return 1;
+//   let result = 0;
+//   for(let x = 0; x <= num; x++){
+//     result += x;
+//   }
+//   return result;
+// }
 
 
-// 5. String Splitter
+// // 5. String Splitter
 
-function stringSplitter(str, splitter){
-  let result = '';
-  for (let x = 0; x < str.length; x++){
-    if(str[x] === splitter) continue;
-    result += str[x];
+// function stringSplitter(str, splitter){
+//   let result = '';
+//   for (let x = 0; x < str.length; x++){
+//     if(str[x] === splitter) continue;
+//     result += str[x];
 
-  }
-  return result;
-}
-
-
+//   }
+//   return result;
+// }
 
 
-// 6. Fibonacci
 
 
-function compute(num) {
-  let result = [];
-  for (let i = 1; i <= num; i++) {
+// // 6. Fibonacci
 
-    if (i === 1) {
-      result.push(0);
-    }
-    else if (i == 2) {
-      result.push(1);
-    }
-    else {
-      result.push(result[i - 2] + result[i - 3]);
-    }
-  }
-  return result;
-}
 
-// 7. Factorial
-function factorial(num){
-let result = 1;
+// function compute(num) {
+//   let result = [];
+//   for (let i = 1; i <= num; i++) {
 
-  for (let x = 1; x <= num; x++){
-    result *= x;
-  }
-  return result;
-}
+//     if (i === 1) {
+//       result.push(0);
+//     }
+//     else if (i == 2) {
+//       result.push(1);
+//     }
+//     else {
+//       result.push(result[i - 2] + result[i - 3]);
+//     }
+//   }
+//   return result;
+// }
+
+// // 7. Factorial
+// function factorial(num){
+// let result = 1;
+
+//   for (let x = 1; x <= num; x++){
+//     result *= x;
+//   }
+//   return result;
+// }
+
+// // 13. recursive big O
+
+// 1. o(n) one recursion call per number sheep 
+// 2. o(n) one set of operations (recursion call + multiplying by base)
+// 3. o(n) 
+// 4. o(n)
+// 5. o(n)
+// 6. o(2^n) two recursive calls are done for every number
+// 7. o(n)
+// 8. o(2^n)
+// 9. o(2^n)
+// 10. o(n^2)
+// 11. o(n^2)
+// 12. o(n)
+
+// 14. all are o(n)
